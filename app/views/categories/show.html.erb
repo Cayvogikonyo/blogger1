@@ -1,0 +1,23 @@
+<div class="wrapper"><h1> <%= @category.name %></h1></div>
+<br>
+<div id="category-articles" style="text-align: left;">
+	<ul class="articles-list" id="articles">
+		<% @category.articles.order(created_at: :desc).each do |article| %>
+			<li>
+				<div id="article-holder">
+					 <div class="article-holder">
+		        		<h4><%= article.title %></h4>
+		       			 <p><%= simple_format article.body %></p>
+		      		</div>
+		      		<div class="show-more">
+					<%= link_to 'Show more', article_path(article) %>
+		    		</div>
+				</div>
+			</li>
+		<% end %>
+	</ul>
+<!--<% if logged_in? %>
+<%= link_to "delete", category_path(@category), method: :delete, data: {confirm: "Do you want to delete the category?"} %><br>
+<%= link_to "edit", edit_category_path(@category), id: 'article-show-link' %>
+<% end %>-->
+</div>

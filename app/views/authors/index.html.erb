@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div class="wrapper"><h1>Authors</h1></div>
+<div class="article-content">
+<div>
+<ul class="authors-list">
+	<% @authors.each do |author| %>
+		<li>
+			<%= link_to author.username, author_path(author)%>
+			
+		</li>
+	<% end %>
+</ul>
+
+</div>
+<%= link_to 'New Author', new_author_path, class: "new-author" %>
+</div>

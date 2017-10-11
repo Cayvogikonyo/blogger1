@@ -1,0 +1,58 @@
+
+<div class="wrapper"><h1 id="inset">Categories</h1></div>
+<div class="beta">
+<!--<ul id='tags'>
+	<% @categories.each do |category| %>
+	<li>
+		<%= link_to category.name, category_path(category), class: 'article_title', id: "category_#{category.id}" %>
+
+	</li>
+	<% end %>
+	
+</ul> -->
+<div id="category_4">
+	<!--<p style="float: right;"><%= image_tag "Reallife.jpg", class: 'image_reallife' %></p>--><a class="home-link" id="category_4" href="/categories/4"><span>Diary of a Kenyan</span></a><br>
+		<!--<p>Life is a beautiful thing with ups and down. The beauty of living is having tales to tell about it and share the fun as well as sorrowful moments. Lets share the beauty of life in words.</p>-->
+	</div>
+
+
+<a href="/categories/2"></a>
+	<div id="category_2">
+		<!--<p style="float: right;"><%= image_tag "politics.jpg", class: 'image_politics' %></p>--><a class="home-link" id="category_2" href="/categories/2"><span>Politics</span></a><br>
+		<!--<p>Take a step bExclusive politic gossips and happenings form all around kenya and the world. Trustworthy, entertaing and true.</p>-->
+	</div>
+<a href="/categories/3"></a>
+	<div id="category_3">
+	<!--<p style="float: left;"><%= image_tag "narratives.jpg", class: 'image_narratives' %></p>--><a class="home-link" id="category_3" href="/categories/3"><span>Narratives/Fiction/Fantasy</span></a><br>
+		<!--<p>Story telling is a form of art that has been practices by the human race since time immemorial. Listed here are amazing narrative and superbly matured fantasy tales crafted for your enjoyment and satisfaction.</p>-->
+	</div>
+	
+	
+	<a href="/categories/1">
+	<div id="category_1">
+		<!--<p style="float: left;" ><%= image_tag "updated.jpg", class: 'image_poem' %>
+		</p>-->
+		<a class="home-link" id="category_1" href="/categories/1"><span> Poems</span></a><br>
+		<!--<p class="top">Well written poetry full of word puns, rhymes and riddles from a collection of poems with abstract ideas and concepts  at the touch of a screen.</p>-->
+	</div></a>
+	
+<% if logged_in? %>
+<%= link_to "Create A New Category", new_category_path, class: 'new_category' %>
+<% end %>
+</div>
+<div class="recent-articles"> 
+	<div id="recent-articles">
+	<h3>Recent articles</h3>
+	<ul>
+	<% @articles.each do |article| %>
+		<li>
+			<div class="textbox">
+			<%= link_to article.title, article_path(article) %>
+			</div>
+		</li>
+	<% end %>
+	</ul>
+	</div>
+</div>  
+<br>
+<br>

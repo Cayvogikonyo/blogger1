@@ -1,0 +1,12 @@
+<h1>Edit Profile.</h1>
+<%= form_for  [ @author, @user ] do |f| %>
+
+
+	<p>
+		<%=f.label :body, "Bio:" %><br>
+		<%= f.text_area :body %>
+	</p>
+	<p>
+		<%= f.submit 'Submit' %>
+	</p>
+	<% end %>

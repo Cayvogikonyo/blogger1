@@ -1,0 +1,26 @@
+
+<div class="author-profile">
+	<div class="gravatar">
+		<p><%= image_tag gravatar_url("#{@author.email}", 120), alt: "" %><p>
+	</div>
+	<div class="bio">
+		<p><%= @author.username %></p><br>
+ 		<p><%= @author.email %></p>
+ 	<br>
+   		<p>BIO:</p>
+   		<p><%= name_for (@author) %></p>
+   	<% if logged_in? %>
+	   	<%if @author.user.present? %>
+	   		<%= link_to "Edit ", edit_author_user_path(@user), id: 'article-show-link' %>
+	   	<% else %>
+	   		<%= render partial: 'users/form' %>
+
+	   <% end %>
+	 <% end %>
+	<br>
+
+	<% if logged_in? %>
+		<%= link_to "delete", author_path(@author), method: :delete, data: {confirm: "Do you want to delete the author?"} %>
+		<% end %>
+	</div>
+</div>

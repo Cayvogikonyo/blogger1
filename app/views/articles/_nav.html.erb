@@ -1,0 +1,14 @@
+<div class="blogname">
+<h1>Jogoo letters</h1>
+<h5 id="catch">My Head in my Fingers</h5>
+</div>
+<ul>
+	<li>
+		<%= link_to "Home", root_path %>
+		<%= link_to "All articles", articles_path %>
+		<%= link_to "Tags", tags_path %>
+		<% if logged_in? %>
+		<%= link_to "Authors", authors_path %>
+    	<% end %>
+    </li>
+ </ul>

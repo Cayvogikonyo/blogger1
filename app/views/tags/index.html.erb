@@ -1,0 +1,13 @@
+		<div class="wrapper"><h1>Tags</h1></div>
+			<div class="article-content">
+			<ul >
+				<% @tags.each do |tag| %>
+				<li id='tags'>
+				<div class="tags">
+					<%= link_to tag.name, tag_path(tag) %>
+				</div>
+				</li>
+				<% end %>
+				
+			</ul>
+		</div>

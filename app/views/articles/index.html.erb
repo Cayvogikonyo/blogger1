@@ -1,0 +1,41 @@
+<div class="wrapper"><h1>All Articles</h1></div>
+<div class="articles-list">
+<ul id='articles'>
+	<% @articles.each do |article| %>
+		<li>
+      <div id="article-holder">
+      <div class="article-holder">
+        <h4><%= article.title %></h4>
+        <p><%= simple_format article.body %></p>
+      </div>
+      <div class="show-more">
+			<%= link_to 'Show more', article_path(article) %>
+    </div>
+  </div>
+		</li>
+	<% end %>
+</ul>
+<% if logged_in? %>
+<%= link_to "Create A New Article", new_article_path, class: "new_article" %>
+<% end %>
+</div>
+<div id="post-archive">
+<h3>Article archive</h3>
+
+ <ul class="list">
+  <% @articles_by_month.each do |month, articles| %>
+  
+    <li>
+   <a><%="#{month.strftime('%B %Y')} (#{articles.count}):" %></a>
+    <ul>
+        <% for article in articles %>
+      
+       <li><%= link_to article.title, article_path(article) %></li>
+       
+     <% end %>
+      </ul>
+   </li>
+  
+  <% end %>
+   </ul>
+</div>
