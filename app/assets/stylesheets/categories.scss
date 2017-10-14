@@ -207,3 +207,12 @@ a span{
 		min-height: 400px;
 	}
 }
+	@media only screen and (min-device-width : 768px) and (max-device-width: 1224px){
+		#category_1, #category_2, #category_3, #category_4{
+			max-width: 550px;
+		}
+		div.beta{
+			min-width: 550px; 
+			max-width: 560px;
+		}
+}

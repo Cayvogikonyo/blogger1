@@ -25,6 +25,37 @@ background-color: #960907;
 min-height: 100%;
   
 }
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+     border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+
 #main {
   overflow: auto;
   }
@@ -372,8 +403,13 @@ a.new_article, a.new_category, a.new-author{
   float: right;
   border-radius: 15px;
   padding: 5px;
-}
 
+}
+.article-image-center{
+  border-radius: 13px;
+  margin: 8px auto;
+  padding: 5px 7px;
+}
 #follow-button {
   background-color: rgb(55, 55, 55);
 }
@@ -575,18 +611,18 @@ div.image_top{
 }
 
 .fb-follow{
-  float: left;
-  clear: left;
-  width: 25%;
-  padding-top: 17px;
+  padding: 0 25px;
+  display: inline;
   padding-left: 10px;
+  padding-bottom: 8px;
+  margin: auto;
 }
 
 .twitter-follow{
-  float: right;
-  clear: right;
-  width: 72%;
-  padding-top: 17px;
+  padding: 10px 25px 0 25px;
+  display: inline;
+
+
 }
 
 img#image_top{
@@ -708,15 +744,16 @@ div#post-archive{
 }
 
 .follow-buttons{
-  float: left;
-  clear: left;
-  width: 49.5%;
+  margin: 0 auto;
+  display: table;
 }
 
 .follow-buttons p{
   width: auto;
   margin: 0;
   color: #f1f1f1;
+  padding: 10px 0;
+  text-align: center;
 }
 
 .logger{
@@ -745,22 +782,9 @@ div#post-archive{
   
 }
 
-.fb-follow{
-  float: left;
-  clear: left;
-  width: 47%;
-  padding-top: 17px;
- 
+.article-image-right{
+  max-width: 95%;
 }
-
-.twitter-follow{
-  float: right;
-  clear: right;
-  width: 46%;
-  padding-top: 15px;
- 
-}
-
 
 .bio {
   padding-top: 5px;
@@ -818,6 +842,7 @@ div#post-archive{
 .footer {
   background-position: none;
   max-width: 480px;
+  text-align: center;
   }
 .recent-articles{
   padding: 10px 3px 3px 0px;

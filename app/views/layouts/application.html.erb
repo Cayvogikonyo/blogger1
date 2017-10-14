@@ -2,10 +2,12 @@
 <html>
   <head>
     <title>Jogooletters</title>
+    <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
 <body class="layout-two-column-left" >
@@ -64,22 +66,15 @@
       <hr style="margin: 0;">
         <div class="follow-buttons">
           <p>Follow us:</p>
-          <div class="fb-follow" data-href="https://www.facebook.com/kenny.m.mugambi" colorscheme="dark" data-layout="button_count" data-size="large" data-show-faces="true" ></div>
+          <div><div class="fb-follow" data-href="https://www.facebook.com/kenny.m.mugambi" colorscheme="dark" data-layout="button_count" data-size="large" data-show-faces="true" ></div>
          <div class="twitter-follow">
           <a href="https://twitter.com/Jogoo_Letters?ref_src=twsrc%5Etfw" data-button = "grey" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false" style="padding-top: 10px;">Follow @Jogoo_Letters</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        </div>
+        </div></div>
 
-
-
-         <div class="logger">
           <h6>
             <% if logged_in? %>
               <%= "Logged in as #{current_user.email}" %>
               <%= link_to "(logout)", logout_path %>
-              <% else %>
-              <%= link_to "(login)", login_path %>
-               Logged out
               <% end %>
           </h6>
         </div>
