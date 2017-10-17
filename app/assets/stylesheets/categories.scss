@@ -99,7 +99,7 @@ div.alpha-inner{
 	clear: both;
 	background: url(updated.jpg) no-repeat;
   	height: 320px;
-	max-width: 460px;
+	max-width: 442px;
 	min-width: 320px;
 	box-sizing: border-box;
 	margin-right:13px;
@@ -108,7 +108,7 @@ div#category_2{
 	background: url(politics.jpg) no-repeat;
 	background-position: right;
   	height:320px;
-	max-width: 460px;
+	max-width: 442px;
 	min-width: 320px;
 	box-sizing: border-box;
 	background-size:100%;
@@ -118,7 +118,7 @@ div#category_3{
 	clear: both;
 	background: url(narratives.jpg) no-repeat;
   	height: 320px;
-	max-width: 460px;
+	max-width: 442px;
 	min-width: 320px;
 	box-sizing: border-box;
 
@@ -126,7 +126,7 @@ div#category_3{
 div#category_4{
 	background: url(reallife3.jpg) no-repeat;
   	height: 320px;
-	max-width: 460px;
+	max-width: 442px;
 	min-width: 320px;
 	box-sizing: border-box;
 	display:table;
@@ -188,7 +188,14 @@ div.recent-articles {
 	float: none;
 	position: relative;
 	max-width: 250px;
-}
+	clear: none !important;
+	margin: auto !important;
+	}
+#recent-articles{
+	display: table;
+	margin: 0 auto !important;
+
+	}
 div.alpha-inner{
 	clear: none;
 }
@@ -204,15 +211,67 @@ a span{
 @media (min-width: 1500px) {
 
 	#category_1, #category_2, #category_3, #category_4 {
-		min-height: 400px;
+		min-height: 350px;
 	}
 }
-	@media only screen and (min-device-width : 768px) and (max-device-width: 1224px){
+
+@media only screen and (min-device-width:480px) and (max-device-width: 768px){
+	div.beta{
+		min-width: 430px;
+		max-width: 560px;
+		float: none;
+		clear: none;
+	}
+	.beta-inner{
+		max-width: 705px !important;
+	}
+	div.recent-articles {
+	float: none;
+	position: relative;
+	max-width: 250px;
+	clear: none !important;
+	margin: auto !important;
+	}
+	#recent-articles{
+	display: table;
+	margin: 0 auto !important;
+
+	}
+}
+@media only screen and (min-device-width : 768px) and (max-device-width: 1000px){
 		#category_1, #category_2, #category_3, #category_4{
 			max-width: 550px;
 		}
 		div.beta{
+			float: none;
+			clear: none;
+			margin: auto;
 			min-width: 550px; 
 			max-width: 560px;
 		}
+		div.recent-articles{
+			float: none;
+			clear: none !important;
+			margin: auto !important;
+		}
+		#recent-articles{
+			display: table;
+			margin: 0 auto !important;
+
+		}
+}
+@media only screen and (min-device-width : 1000px) and (max-device-width: 1200px){
+	div.beta{
+		min-width: 720px;
+		max-width: 730px;
+	}
+	}
+@media only screen and (min-device-width : 1200px) and (max-device-width: 1500px){
+	div.beta{
+		min-width: 820px;
+		max-width: 830px;
+	}
+	#category_1, #category_2, #category_3, #category_4 {
+		min-height: 250px;
+	}
 }

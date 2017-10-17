@@ -108,7 +108,7 @@ a {
   max-width: 80%;
   background: #f1f1f1;
   overflow: auto;
- 
+  padding: 0px !important;
   margin: 0 auto;
   }
 .articles-list{
@@ -362,7 +362,7 @@ margin-left: 25px; padding-top: 30px;}
 .blogname{
   padding-left: 135px;
   float: left;
-  max-width: 300px;
+  
 }
 #tags{
   background-colour: #ccc;
@@ -532,7 +532,7 @@ input#comment_author_name{
   text-align: justify;
 }
 .beta-inner{
-  max-width: 705px;
+  max-width: 80%;
   padding: 0px 10px 5px 0px;
   margin: auto;
   line-height: 1.5em;
@@ -544,6 +544,11 @@ input#comment_author_name{
   background-color: #960907;
   min-height: 105px;
   }
+.wrapper h1{
+  color: white;
+  margin: auto;
+  display: table;
+}
 
   .tags { // main body of tag
   background: #cceef0;
@@ -616,13 +621,14 @@ div.image_top{
   padding-left: 10px;
   padding-bottom: 8px;
   margin: auto;
+  float: left;
+  clear: left;
 }
 
 .twitter-follow{
-  padding: 10px 25px 0 25px;
-  display: inline;
-
-
+  padding: 0 25px;
+  float: right;
+  clear: right;
 }
 
 img#image_top{
@@ -822,6 +828,7 @@ div#post-archive{
   margin-left: 3px;
   margin-right: 3px;
   margin-top:18px;
+  padding: 0px 15px !important;
 
   }
 .articles-list{
@@ -905,7 +912,7 @@ margin-left: 3px; padding-top: 12px;}
   padding-top: 18px;
   float: none;
   margin: 0px;
-  max-width: 400px;
+  max-width: 480px;
 }
 
 .beta-inner{
