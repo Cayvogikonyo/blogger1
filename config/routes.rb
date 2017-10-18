@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'password_resets/create'
+
+  get 'password_resets/edit'
+
+  get 'password_resets/update'
+
   mount Ckeditor::Engine => '/ckeditor'
 	root to: 'categories#index'
 	resources :categories
@@ -10,7 +16,7 @@ Rails.application.routes.draw do
 		resources :users
 	end
 	resources :author_sessions, only: [ :new, :create, :destroy ]
-	
+	resources :password_resets
 
 	get 'login' => 'author_sessions#new'
 	get 'logout' => 'author_sessions#destroy'

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  authenticates_with_sorcery!
   belongs_to :author
   validates :author_id, presence: true
 
