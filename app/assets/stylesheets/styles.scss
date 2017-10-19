@@ -476,6 +476,7 @@ input[type=submit]{
   -khtml-background-clip:padding-box;
   background-clip:padding-box;
   font-size:1.2em;
+  margin: auto;
   }
 
 .input,form input[type=text],form input[type=password],form textarea{
@@ -493,8 +494,19 @@ input[type=submit]{
   padding:.3em .4em;
   border:1px solid #ccc;
   background-color:#f5f5f5;
-  color:#1f2d3e;font-size:1.3em
+  color:#1f2d3e;font-size:1.3em;
+  margin: auto;
   }
+
+#forgot{
+  padding-left: 30px;
+}
+#remember{
+  text-transform: lowercase;
+}
+.remember{
+  padding-top: 10px;
+}
 .input:focus,form input[type=text]:focus,form input[type=password]:focus,form textarea:focus{
   outline:0;
   -moz-box-shadow:rgba(129, 177, 223, 0.7) 0 0 5px 1px inset;
@@ -502,7 +514,8 @@ input[type=submit]{
   -o-box-shadow:rgba(129, 177, 223, 0.7) 0 0 5px 1px inset;
   box-shadow:rgba(129, 177, 223, 0.7) 0 0 5px 1px inset;
   border-color:#81b1df;
-  background-color:#fff
+  background-color:#fff;
+  margin: auto;
   }
 
 .article_show{
@@ -525,6 +538,12 @@ input#comment_author_name{
 #comment_body{
   max-width: 340px;
 }
+
+.login{
+  max-width: 80%;
+  margin: auto;
+}
+
 
 .article-content{
   padding: 15px 5px 0px 5px;

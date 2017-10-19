@@ -1,20 +1,23 @@
-<h1>Login</h1>
+<div class="login"><h1>Login</h1>
 <%= form_tag author_sessions_path, method: :post do %>
-	<div class= "field">
+	<div class= "login-field">
 		<%= label_tag :email %><br>
 		<%= text_field_tag :email %>
 		<br>
 	</div>
-	<div class= "field"><br>
+	<div class= "login-field"><br>
 		<%= label_tag :password %><br>
 		<%= password_field_tag :password %>
 		<br>
 	</div>
-	<%= check_box_tag :remember, params[:remember], true %>
-	<%= label_tag :remember %>
+	
+	<div class= "remember"><%= check_box_tag :remember, params[:remember], true %>
+	<%= label_tag :'remember me',"remember me", id:"remember" %>
+	<%= link_to 'Forgot Password?', new_password_reset_path, id:"forgot" %></div>
 	<div class= "actions">
 		<%= submit_tag "Login" %>		
 	</div>
 <% end %>
-<%= link_to 'Forgot Password?', new_password_reset_path %>
+
 <%= link_to 'Back', articles_path %>
+</div>

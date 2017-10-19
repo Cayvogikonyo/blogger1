@@ -66,17 +66,18 @@
       <hr style="margin: 0;">
         <div class="follow-buttons">
           <p>Follow us:</p>
-          <div><div class="fb-follow" data-href="https://www.facebook.com/kenny.m.mugambi" colorscheme="dark" data-layout="button_count" data-size="large" data-show-faces="true" ></div>
-         <div class="twitter-follow">
-          <a href="https://twitter.com/Jogoo_Letters?ref_src=twsrc%5Etfw" data-button = "grey" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false" style="padding-top: 10px;">Follow @Jogoo_Letters</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div></div>
+          <div style="clear: both; overflow: hidden; float: left;">
+            <div class="fb-follow" data-href="https://www.facebook.com/kenny.m.mugambi" colorscheme="dark" data-layout="button" data-size="large" data-show-faces="true" ></div>
+            <div class="twitter-follow"><a href="https://twitter.com/Jogoo_Letters?ref_src=twsrc%5Etfw" data-button = "grey" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false" style="padding-top: 10px;">Follow @Jogoo_Letters</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+          </div>
 
-          <h6>
-            <% if logged_in? %>
-              <%= "Logged in as #{current_user.email}" %>
-              <%= link_to "(logout)", logout_path %>
-              <% end %>
-          </h6>
+          <div><h6>
+              <% if logged_in? %>
+                <%= "Logged in as #{current_user.email}" %>
+                <%= link_to "(logout)", logout_path %>
+                <% end %>
+            </h6>
+          </div>
         </div>
         <br clear="both">
 </div>
