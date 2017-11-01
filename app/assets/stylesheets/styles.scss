@@ -900,7 +900,7 @@ div#recent-articles {
 
 div#top-nav{
   box-shadow: none;
-  width: 480px;
+  width: 100%;
   clear: none;
   background: url(design.jpg) no-repeat;
   overflow: hidden;
@@ -909,7 +909,7 @@ div#top-nav{
   left: 0px;
   padding: 0px;
   margin: 0px;
-  height:93px;
+  height: auto;
   background-size:100%;
 }
 
