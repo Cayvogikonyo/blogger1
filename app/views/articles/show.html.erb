@@ -1,12 +1,4 @@
-<!--<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>-->
- 
+
 <div class="article">
 <div class="article_show">
 <h1 class ="article_header"><%= @article.title %></h1>
@@ -37,10 +29,10 @@
 <div class="article-comment">
 <!--<%= render partial: 'articles/comment' , collection: @article.comments %>
 <%= render partial: 'comments/form' %>-->
-<div class="fb-comments" expr:href='data:article.url' data-numposts="5"></div>
+<div id="fb-comments" data-turbolinks-permanent class="fb-comments" expr:href='data:article.url' data-numposts="5"></div>
 
 </div>
- <!--<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div><br> --> 
+
 <% if logged_in? %>
 <%= link_to "Delete Article", article_path(@article), method: :delete, data: {confirm: "Do you want to delete the article?"}, id: 'article-show-link' %>
 <%= link_to "Edit Article", edit_article_path(@article), id: 'article-show-link' %>

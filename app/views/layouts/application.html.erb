@@ -11,16 +11,30 @@
   </head>
 
 <body class="layout-two-column-left" >
+
 <div class="capsule">
     <div id="main">
         <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId            : 'your-app-id',
+              autoLogAppEvents : true,
+              xfbml            : true,
+              version          : 'v2.10'
+            });
+            FB.AppEvents.logPageView();
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "https://connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
+            
         
         <script type="text/coffeescript">$('.list > li a').click ->
           $(this).parent().find('ul').toggle()
@@ -57,8 +71,6 @@
             </div>
             <br class="clear">
             
-
-          <!-- <iframe src="https://web.facebook.com/plugins/follow?href=https%3A%2F%2Fweb.facebook.com%2Fkenny.m.mugambi&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=450&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:80px; display: block;" allowTransparency="true"></iframe>-->
     </div>
 </div>
 <div class="footer">
@@ -66,8 +78,8 @@
       <hr style="margin: 0;">
         <div class="follow-buttons">
           <p>Follow us:</p>
-          <div style="clear: both; overflow: hidden; float: left;">
-            <div class="fb-follow" data-href="https://www.facebook.com/kenny.m.mugambi" colorscheme="dark" data-layout="button" data-size="large" data-show-faces="true" ></div>
+          <div style="clear: both; overflow: hidden;">
+            <div id="fb-follow" data-turbolinks-permanent class="fb-follow" data-href="https://www.facebook.com/kenny.m.mugambi" colorscheme="dark" data-layout="button" data-size="large" data-show-faces="true" ></div>
             <div class="twitter-follow"><a href="https://twitter.com/Jogoo_Letters?ref_src=twsrc%5Etfw" data-button = "grey" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false" style="padding-top: 10px;">Follow @Jogoo_Letters</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
           </div>
 
@@ -81,6 +93,11 @@
         </div>
         <br clear="both">
 </div>
+<script language="javascript" type="text/javascript">
+     $(window).load(function() {
+     $('#loading').hide();
+  });
+</script>
 </body>
 </html>
 
