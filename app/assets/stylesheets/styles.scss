@@ -840,7 +840,7 @@ div#post-archive{
 }
 
 .author-profile {
-  max-width: 480px;
+  max-width: 100%;
   clear: both;
   display: block;
 }
@@ -861,7 +861,7 @@ div#post-archive{
 
 .container {
   min-height: 100%;
-  max-width: 480px;
+  max-width: 100%;
   background: #f1f1f1;
   margin: 0 auto;
   margin-left: 3px;
@@ -871,14 +871,14 @@ div#post-archive{
 
   }
 .articles-list{
-  max-width: 480px;
+  max-width: 100%;
   text-align: left;
   position: relative;
   float:none;
   display: inline;
 }
 .beta {
-  max-width: 480px;
+  max-width: 100%;
   padding: 0px 6px 3px 0px;
   margin: 0px 0px 0px 6px;
   float: none;
@@ -887,7 +887,7 @@ div#post-archive{
   }
 .footer {
   background-position: none;
-  max-width: 480px;
+  max-width: 100%;
   text-align: center;
   }
 .recent-articles{
@@ -951,11 +951,11 @@ margin-left: 3px; padding-top: 12px;}
   padding-top: 18px;
   float: none;
   margin: 0px;
-  max-width: 480px;
+  max-width: 100%;
 }
 
 .beta-inner{
-  max-width: 480px;
+  max-width: 100%;
   padding: 0px 10px 5px 0px;
   margin: auto;
   line-height: 1.5em;
