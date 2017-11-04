@@ -1,6 +1,13 @@
 class UsersController < ApplicationController
 	 before_action :require_login, except: [:index]
-
+	 before_action :require_owner, only: :edit
+def require_owner
+	if current_user != Author.includes(:user).find(params[:id])
+    redirect_to root_path
+    flash.notice = "You Cannot Edit This Profile"
+    
+  	end
+end
 def create
 	@user = User.new(user_params)
 	@user.author_id = params[:author_id]

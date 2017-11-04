@@ -1,5 +1,5 @@
 module ArticlesHelper
 def article_params
-	params.require(:article).permit(:title, :body, :tag_list, :image, :category_id)
+	params.require(:article).permit(:title, :body, :tag_list, :category_id, :author_id)
 end
 end

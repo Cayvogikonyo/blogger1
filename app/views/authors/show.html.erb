@@ -6,21 +6,21 @@
 	<div class="bio">
 		<p><%= @author.username %></p><br>
  		<p><%= @author.email %></p>
- 	<br>
+ 		<br>
    		<p>BIO:</p>
    		<p><%= name_for (@author) %></p>
-   	<% if logged_in? %>
-	   	<%if @author.user.present? %>
-	   		<%= link_to "Edit ", edit_author_user_path(@user), id: 'article-show-link' %>
-	   	<% else %>
-	   		<%= render partial: 'users/form' %>
+   		<% if logged_in? %>
+	   		<%if @author.user.present? %>
+	   			<%= link_to "Edit ", edit_author_user_path(@user), id: 'article-show-link' %>
+	   		<% else %>
+	   			<%= render partial: 'users/form' %>
 
-	   <% end %>
-	 <% end %>
-	<br>
+	   		<% end %>
+	 	<% end %>
+		<br>
 
-	<% if logged_in? %>
+	<% if current_user.try(:admin?) %>
 		<%= link_to "delete", author_path(@author), method: :delete, data: {confirm: "Do you want to delete the author?"} %>
-		<% end %>
+	<% end %>
 	</div>
 </div>

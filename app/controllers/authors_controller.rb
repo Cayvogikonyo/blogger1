@@ -2,6 +2,7 @@ class AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :edit, :update, :destroy]
   before_action :zero_authors_or_authenticated, only: [:new, :create]
   before_action :require_login, except: [:show, :new, :create]
+  before_action :admin_only, only: :index
   # GET /authors
   # GET /authors.json
   def zero_authors_or_authenticated
@@ -10,6 +11,11 @@ class AuthorsController < ApplicationController
         return false      
       end
    end
+  def admin_only
+    unless current_user.try(:admin?)      
+    redirect_to root_path     
+    end
+  end
   def index
     @authors = Author.all
   end
@@ -66,14 +72,10 @@ class AuthorsController < ApplicationController
   # DELETE /authors/1.json
   def destroy
     @author.destroy
-    respond_to do |format|
-      format.html { redirect_to authors_url, notice: 'Author was successfully destroyed.' }
-      format.json { head :no_content }
-    end
 
   flash.notice = "Author Deleted"
 
-  redirect_to action: "index" 
+  redirect_to root_path
   end
 
   private

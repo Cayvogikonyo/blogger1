@@ -2,6 +2,15 @@ class ArticlesController < ApplicationController
 include ArticlesHelper
 
  before_action :require_login, except: [:index, :show]
+ before_action :require_permission, only: [:edit, :destroy]
+
+def require_permission
+ unless current_user.try(:admin?) || current_user == Article.find(params[:id]).author 
+ 	redirect_to root_path
+    flash.notice = "You Can't Delete or Edit This Article as you are not the Author."
+    
+  end
+end
 
 def index
   @articles = Article.all.order(created_at: :desc)
@@ -12,6 +21,7 @@ def show
 	@article = Article.find(params[:id])
 	@comment = Comment.new
 	@comment.article_id = @article_id
+	@article_author = Article.includes(:author).find(params[:id])[:author_id]
 end
 def new
 	@article = Article.new
@@ -26,6 +36,7 @@ end
 def create
 	@article = Article.new(article_params)
 	@article.category.name = params[:category_id]
+	@article.author = current_user
 	@article.save
 	flash.notice = "Article '#{@article.title}' has Been Created."	
 

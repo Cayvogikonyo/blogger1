@@ -15,12 +15,6 @@
 
 <div class="capsule">
     <div id="main">
-  
-        
-        <script type="text/coffeescript">$('.list > li a').click ->
-          $(this).parent().find('ul').toggle()
-          return
-        </script>
           <div class='image_top'> <a href="/authors/1"> <%= image_tag "air-mail1.jpg", id: 'image_top'%> </a><br> <p>ABOUT</p></div>
           
         <div id="top-nav">
@@ -35,9 +29,9 @@
               <%= link_to "Home", root_path %>  
               <%= link_to "All articles", articles_path %>
               <%= link_to "Tags", tags_path %>
-              <% if logged_in? %>
-              <%= link_to "Authors", authors_path %>
-                <% end %>
+              <% if current_user.try(:admin?) %>
+                <%= link_to "Authors", authors_path %>
+              <% end %>
               </li>
            </ul>
 
@@ -45,6 +39,8 @@
             <br class="clear"> 
              <div class="container">
              <p class="flash"><%= flash.notice %></p>
+             <p class="alert"><%= flash.alert %></p>
+
               <div class="content"> 
                 <%= yield %>
 

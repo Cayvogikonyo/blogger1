@@ -18,13 +18,6 @@
 		<%= f.text_field :tag_list %>
 	</p>
 	<p>
-		<% if @article.image.exists? %>
-			<%= image_tag @article.image.url %><br>
-		<% end %>
-		<%= f.label :image, "Attach images" %><br>
-		<%= f.file_field :avatar %>
-	</p>
-	<p>
 		<%=f.label :Category %><br>
 		<%= collection_select(:article, :category_id, @categories, :id, :name, {:prompt => "Select One" })%>
 	</p>

@@ -21,8 +21,10 @@
 
 
 			<p class="article-time">
-			  <%= @article.created_at.strftime("%B %d %Y, %l:%M%P") %>
+				<%= @article.created_at.strftime("%B %d %Y, %l:%M%P") %><br>
+				by <%= link_to "#{@article.author.username}", author_path(@article_author)%> 
 			</p>
+
 			<p id='tags'>
 				Tags:
 				<% @article.tags.each do |tag| %>
