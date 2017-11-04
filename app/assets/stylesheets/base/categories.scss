@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 div#category_1{
 	clear: both;
-	background: url(updated.jpg) no-repeat;
+	background: image-url("updated.jpg") no-repeat;
   	height: 200px;
 	width: 100%;
 	background-size:100%;
@@ -20,7 +20,7 @@ div#category_1{
 }
 
 div#category_2{
-	background: url(politics.jpg) no-repeat;
+	background: image-url("politics.jpg") no-repeat;
 	background-position: right;
   	height: 200px;
 	width: 100%;
@@ -37,7 +37,7 @@ div#category_2{
 }
 div#category_3{
 	clear: both;
-	background: url(narratives.jpg) no-repeat;
+	background: image-url("narratives.jpg") no-repeat;
   	height: 200px;
 	width: 100%;
 	background-size:100%;
@@ -52,7 +52,7 @@ div#category_3{
   	background-size: cover;
 }
 div#category_4{
-	background: url(reallife3.jpg) no-repeat;
+	background: image-url("reallife3.jpg") no-repeat;
 	background-position: right;
   	height: 200px;
 	width:100%;
@@ -114,7 +114,7 @@ a span{
 	margin-right:13px;
 }
 div#category_2{
-	background: url(political1.jpg) no-repeat;
+	background: image-url("political1.jpg") no-repeat;
   	height:270px;
 	width: 100%;
 	min-width: 320px;
@@ -130,7 +130,7 @@ div#category_3{
 
 }
 div#category_4{
-	background: url(reallife) no-repeat;
+	background: image-url("reallife") no-repeat;
   	height: 270px;
 	width: 100%;
 	min-width: 320px;
