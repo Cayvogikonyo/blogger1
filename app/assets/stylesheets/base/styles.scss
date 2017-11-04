@@ -830,6 +830,9 @@ div#post-archive{
 .article-image-right{
   max-width: 95%;
 }
+.article-image-center{
+  width: 100%;
+}
 
 .bio {
   padding-top: 5px;
@@ -864,8 +867,6 @@ div#post-archive{
   max-width: 100%;
   background: #f1f1f1;
   margin: 0 auto;
-  margin-left: 3px;
-  margin-right: 3px;
   margin-top:18px;
   padding: 0px 15px !important;
 
@@ -879,6 +880,7 @@ div#post-archive{
 }
 .beta {
   max-width: 100%;
+  min-width: 100%;
   padding: 0px 6px 3px 0px;
   margin: 0px 0px 0px 6px;
   float: none;
@@ -916,8 +918,8 @@ div#top-nav{
 
 #top-nav ul {
   list-style: none;
-  max-width: 400px;
-  padding-left: 135px;
+  max-width: 100%;
+  padding-left: 105px;
   margin: 0;
   overflow: visible;
   float:none;
@@ -927,7 +929,7 @@ div#top-nav{
 
 #top-nav ul{ 
 vertical-align: baseline;
-margin-left: 3px; padding-top: 12px;}
+margin-left: 3px; padding-top: 6px;}
 
 #top-nav li a{
   padding-left: 7px;
@@ -976,7 +978,8 @@ html {
 div.image_top{
   float: left;
   overflow:hidden;
-  border-radius: 0px 0px 7px 7px;
+  margin-top: 9px;
+  border-radius: 7px 7px 7px 7px;
   width: 99px;
   height: 99px;
   }
