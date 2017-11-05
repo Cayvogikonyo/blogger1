@@ -9,11 +9,6 @@ body {/*
    
   }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html, body {
    margin: 0px;
    width: 100%;
@@ -684,7 +679,7 @@ img.article_image{
   width: 100%;
 }
 
-p.flash{
+p.flash, .alert{
   -moz-box-shadow:rgba(0, 0, 0, 0.5) 0 1px 3px;
   -webkit-box-shadow:rgba(0, 0, 0, 0.5) 0 1px 3px;
   -o-box-shadow:rgba(0, 0, 0, 0.5) 0 1px 3px;
@@ -715,15 +710,14 @@ p.flash{
   text-shadow:rgba(0, 0, 0, 0.6) 0 -1px;
   color:#fff;
   margin:0 auto;
-  position:absolute;
-  left:0;
-  padding:.4em .8em;
-  left:45%;
-  text-align:center;
-  border-top:0
+  position:relative;
+  padding:0;
+  text-align: center;
+  border-top:0;
+  margin:0 auto;
   }
 
-p.flash:empty{
+p.flash:empty, p.alert:empty{
   height:0px;
   overflow:hidden;
   padding:0;
