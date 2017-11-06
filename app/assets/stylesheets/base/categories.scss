@@ -94,15 +94,7 @@ div.recent-articles {
 div.alpha-inner{
 	clear: left;
 }
-a span{
-	color: white;
-	display: inline-block; 
-   letter-spacing: -1px;  
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.7);
-   padding: 10px !important;
-   margin: 4px; 
-}
+
 
 @media only screen and (min-device-width : 320px) and (max-device-width: 480px){
   
@@ -114,7 +106,7 @@ a span{
 	margin-right:13px;
 }
 div#category_2{
-	background: image-url("politics1.jpg") no-repeat !important;
+	background: image-url("politics1.jpg") no-repeat;
   	height:270px;
 	width: 100%;
 	min-width: 320px;

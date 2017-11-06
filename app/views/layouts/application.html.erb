@@ -15,7 +15,7 @@
 
 <div class="capsule">
     <div id="main">
-          <div class='image_top'> <a href="/authors/1"> <%= image_tag "air-mail1.jpg", id: 'image_top'%> </a><br> <p>ABOUT</p></div>
+          <div class='image_top'> <a href="/authors/1"> <%= image_tag "air-mail1.jpg", id: 'image_top'%> </a><br> <p class="about">ABOUT</p></div>
           
         <div id="top-nav">
            <div class="blogname">
@@ -27,11 +27,13 @@
           <ul>
             <li>
               <%= link_to "Home", root_path %>  
-              <%= link_to "All articles", articles_path %>
+              <%= link_to "Posts", articles_path %>
               <%= link_to "Tags", tags_path %>
+              <a href="/authors/1"> About </a>
               <% if current_user.try(:admin?) %>
                 <%= link_to "Authors", authors_path %>
               <% end %>
+
               </li>
            </ul>
 

@@ -10,12 +10,13 @@
    		<p>BIO:</p>
    		<p><%= name_for (@author) %></p>
    		<% if logged_in? %>
-	   		<%if @author.user.present? %>
-	   			<%= link_to "Edit ", edit_author_user_path(@user), id: 'article-show-link' %>
-	   		<% else %>
+	   		<%if @author.user.blank? %>
 	   			<%= render partial: 'users/form' %>
 
 	   		<% end %>
+	   		<%if current_user == @author %>
+	   			<%= link_to "Edit ", edit_author_user_path(@user), id: 'article-show-link' %>
+	   		<%end %>
 	 	<% end %>
 		<br>
 

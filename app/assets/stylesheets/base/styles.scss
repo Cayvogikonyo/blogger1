@@ -170,7 +170,15 @@ ul#articles{
   overflow: hidden;
   clear: right !important;
   }
-
+a span{
+  color: white;
+  display: inline-block; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px !important;
+   margin: 4px; 
+}
 .bio {
   padding-top: 25px;
   float: right;
@@ -293,6 +301,7 @@ div#top-nav{
   margin: 0px;
   height: 82px;
   background-size:100%;
+  z-index: 80;
 }
 
 
@@ -678,7 +687,9 @@ h5#catch{
 img.article_image{
   width: 100%;
 }
-
+p.about{
+  z-index: 98;
+}
 p.flash, .alert{
   -moz-box-shadow:rgba(0, 0, 0, 0.5) 0 1px 3px;
   -webkit-box-shadow:rgba(0, 0, 0, 0.5) 0 1px 3px;
@@ -913,22 +924,23 @@ div#top-nav{
 #top-nav ul {
   list-style: none;
   max-width: 100%;
-  padding-left: 105px;
-  margin: 0;
+  margin: 0 auto;
   overflow: visible;
   float:none;
   clear: none;
   min-height: 25px;
+  margin-left: 10px;
 }
 
 #top-nav ul{ 
-vertical-align: baseline;
-margin-left: 3px; padding-top: 6px;}
+vertical-align: baseline; 
+padding: 3px 0 0 101px;
+}
 
 #top-nav li a{
   padding-left: 7px;
   padding-right: 7px;
-  font-size: 19px;
+  font-size: 16px;
   background: #960907;
   text-decoration-line: underline;
 }
@@ -936,15 +948,15 @@ margin-left: 3px; padding-top: 6px;}
   display: inline;
   clear: none;
   font-weight: bold;
-  font-size: 1.7em;
+  font-size: 1.6em;
   vertical-align: none;
-  padding: 7px 0px 0px 0px;
+  padding: 5px 0px 0px 0px;
   margin:0px;
   text-align:justify;
 }
 .blogname{
-  padding-left: 105px;
-  padding-top: 18px;
+  padding-left: 107px;
+  padding-top: 10px;
   float: none;
   margin: 0px;
   max-width: 100%;
@@ -970,10 +982,9 @@ html {
   display: inline;
 }
 div.image_top{
+  display: inline-block;
   float: left;
   overflow:hidden;
-  margin-top: 9px;
-  border-radius: 7px 7px 7px 7px;
   width: 99px;
   height: 99px;
   }
@@ -988,8 +999,8 @@ div#post-archive{
 }
 h5#catch{
   display: inline;
-  font-size: 15px;
-  font-weight: 550;
+  font-size: 0.9em;
+  
   border-left: solid 2px #fff;
   padding-left: 3px;
   }
