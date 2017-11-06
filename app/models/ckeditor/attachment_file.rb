@@ -1,6 +1,6 @@
 class Ckeditor::AttachmentFile < Ckeditor::Asset
   has_attached_file :download,
-  					:storage => :s3
+  					:storage => :s3,
                     url: '/ckeditor_assets/attachments/:id/:filename',
                     path: ':rails_root/public/ckeditor_assets/attachments/:id/:filename'
 
