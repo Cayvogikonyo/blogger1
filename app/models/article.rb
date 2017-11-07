@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
 	belongs_to :category
-	belongs_to :author, dependent: :delete
+	belongs_to :author
 	validates :category, presence: true
 	has_many :comments, dependent: :destroy
 	has_many :taggings
