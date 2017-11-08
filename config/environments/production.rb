@@ -97,7 +97,7 @@ Rails.application.configure do
       secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
       s3_region: ENV.fetch('AWS_REGION'),
     }
-    :path =&gt; ":class/:id/:basename_:style.:extension",
+    :path =&gt; ":class/:id/:basename_:style.:extension"
     :url =&gt; ":s3_sg_url
   }
 end
