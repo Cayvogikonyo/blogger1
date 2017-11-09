@@ -833,12 +833,14 @@ div#post-archive{
 }
 
 .article-image-right{
-  max-width: 95%;
+  max-width: 90%;
 }
 .article-image-center{
   width: 100%;
 }
-
+.article-image-left{
+  max-width: 90%;
+}
 .bio {
   padding-top: 5px;
   float: none;
@@ -882,6 +884,10 @@ div#post-archive{
   position: relative;
   float:none;
   display: inline;
+}
+h1.article_header{
+  padding-top: 20px;
+  font-size: 30px;
 }
 .beta {
   max-width: 100%;

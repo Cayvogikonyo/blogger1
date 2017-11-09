@@ -75,7 +75,7 @@ class AuthorsController < ApplicationController
 
   flash.notice = "Author Deleted"
 
-  redirect_to root_path
+  redirect_to  action: "index"
   end
 
   private
