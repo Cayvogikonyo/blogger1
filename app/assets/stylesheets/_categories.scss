@@ -268,10 +268,13 @@ div.alpha-inner{
   margin: 0 auto;
   }
 	}
-@media only screen and (min-device-width : 1350px) and (max-device-width: 1500px){
+@media only screen and (min-device-width : 1250px) and (max-device-width: 1500px){
 	div.beta{
 		min-width: 810px;
 		max-width: 820px;
+	}
+	.container{
+		max-width: 85% !important;
 	}
 	#category_1, #category_2, #category_3, #category_4 {
 		min-height: 250px;
