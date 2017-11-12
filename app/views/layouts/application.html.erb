@@ -10,18 +10,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
      
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <%= display_meta_tags site: 'Jogooletters' %>
+    <%= display_meta_tags og: {title: :title, site_name: :site, description: :description, url: :url} %>
+    <meta property="og:image" content='<%= image_url "air-mail1.jpg" %>'/>
 
-    <script type="text/javascript">
-      $(document).on('ready page:change', function() {
-        $("meta[name='twitter\\:title']").attr("content", "<%= @article.title %>");
-        $("meta[name='twitter\\:description']").attr("content", "<%= @article.body %>");
-        $("meta[name='twitter\\:image']").attr("content", "<%= @article.image.url(:medium) %>");
-        $("meta[property='og\\:title']").attr("content", "<%= @article.title %>");
-        $("meta[property='og\\:description']").attr("content", "<%= @article.body %>");
-        $("meta[property='og\\:url']").attr("content", "<%= article_url(@article) %>");
-        $("meta[property='og\\:image']").attr("content", "<%= @article.image.url(:medium) %>");
-      });
-    </script>  
+}
   </head>
 
 <body class="layout-two-column-left" >

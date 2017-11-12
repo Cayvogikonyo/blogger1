@@ -37,6 +37,8 @@ gem 'sorcery'
 gem 'social-share-button'
 gem 'ckeditor'
 gem 'devise'
+gem 'meta-tags'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

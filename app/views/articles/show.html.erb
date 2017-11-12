@@ -6,9 +6,14 @@
   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<% set_meta_tags description: @article.body,
+                 keywords: tag.name, 
+                 url: article_url(@article),
+                 site: "jogooletters.com" 
+                 %>
 <div class="article">
 	<div class="article_show">
-		<h1 class ="article_header"><%= @article.title %></h1>
+		<h1 class ="article_header"><%=title @article.title %></h1>
 	</div>
 	<div class="beta-inner">
 		<div class= "article-content" >
