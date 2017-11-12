@@ -17,4 +17,4 @@
 //= require social-share-button
 //= require turbolinks
 //= require_tree .
-//= require_tree .
+//= require_social-share-button .

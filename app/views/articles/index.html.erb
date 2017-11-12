@@ -11,8 +11,8 @@
 	<% @articles.each do |article| %>
 		<li>
       <div id="article-holder">
+         <div id="article-holder-header"><h4><%= link_to "#{article.title}", article_path(article)%></h4></div>
       <div class="article-holder">
-        <h4><%= article.title %></h4>
         <p><%= simple_format article.body %></p>
       </div>
       <div class="show-more">

@@ -8,7 +8,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript">
+      $(document).on('ready page:change', function() {
+        $("meta[name='twitter\\:title']").attr("content", "<%= @article.title %>");
+        $("meta[name='twitter\\:description']").attr("content", "<%= @article.body %>");
+        $("meta[name='twitter\\:image']").attr("content", "<%= @article.image.url(:medium) %>");
+        $("meta[property='og\\:title']").attr("content", "<%= @article.title %>");
+        $("meta[property='og\\:description']").attr("content", "<%= @article.body %>");
+        $("meta[property='og\\:url']").attr("content", "<%= article_url(@article) %>");
+        $("meta[property='og\\:image']").attr("content", "<%= @article.image.url(:medium) %>");
+      });
+    </script>  
   </head>
 
 <body class="layout-two-column-left" >
@@ -75,6 +88,7 @@
      $('#loading').hide();
   });
 </script>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a079d6e1bd51e5e"></script> 
 </body>
 </html>
 

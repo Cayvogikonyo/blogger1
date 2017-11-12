@@ -1,3 +1,3 @@
 SocialShareButton.configure do |config|
-  config.allow_sites = %w(twitter facebook google_plus pinterest linkedin telegram)
+  config.allow_sites = %w(twitter google_plus pinterest linkedin telegram)
 end

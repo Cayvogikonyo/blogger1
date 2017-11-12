@@ -170,14 +170,15 @@ ul#articles{
   overflow: hidden;
   clear: right !important;
   }
-a span{
+a span#category{
   color: white;
   display: inline-block; 
    letter-spacing: -1px;  
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.7);
-   padding: 10px !important;
-   margin: 4px; 
+   padding: 10px;
+   margin: 4px;
+   line-height: 37px; 
 }
 .bio {
   padding-top: 25px;
@@ -426,7 +427,7 @@ a.new_article, a.new_category, a.new-author{
 .article-image-right{
   float: right;
   border-radius: 15px;
-  padding: 5px;
+  padding:0 0 0 5px;
 
 }
 .article-image-center{
@@ -440,7 +441,7 @@ a.new_article, a.new_category, a.new-author{
 .article-image-left{
   float: left;
   border-radius: 15px;
-  padding: 5px;
+  padding:0 5px 0 0;
 }
 form p{
   padding:0;
@@ -659,10 +660,8 @@ div.image_top{
 }
 
 .fb-follow{
-  padding: 0 25px;
+  padding: 0 5px 0 0;
   display: inline;
-  padding-left: 10px;
-  padding-bottom: 8px;
   margin: auto;
   float: left;
   clear: left;
@@ -727,6 +726,14 @@ p.flash, .alert{
   border-top:0;
   margin:0 auto;
   }
+
+#article-holder-header a:link {
+  font-size: 38px;
+  color:  #001a4d;
+}
+#article-holder-header a:visited {
+  color: #660066;
+}
 
 p.flash:empty, p.alert:empty{
   height:0px;
@@ -828,7 +835,7 @@ div#post-archive{
   max-height: 400px;
   overflow: hidden;
   font-weight: 300;
-  font-size: 19px;
+  font-size: 15px;
   
 }
 
