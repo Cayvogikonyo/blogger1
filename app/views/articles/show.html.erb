@@ -6,7 +6,7 @@
   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<% set_meta_tags description: @article.body,
+<% set_meta_tags description: @article.body.truncate_words(17),
                  keywords: tag.name, 
                  url: article_url(@article),
                  site: "www.jogooletters.com" 
@@ -69,3 +69,5 @@ var addthis_config = addthis_config||{};
     addthis_config.data_track_addressbar = false;
     addthis_config.data_track_clickback = false;
 </script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a079d6e1bd51e5e"></script> 

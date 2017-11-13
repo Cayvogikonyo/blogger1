@@ -505,7 +505,7 @@ input[type=submit]{
   }
 
 .input,form input[type=text],form input[type=password],form textarea{
-  width:100%;
+  width: auto;
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
   -ms-box-sizing:border-box;

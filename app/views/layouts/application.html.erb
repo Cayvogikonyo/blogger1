@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Jogooletters.com</title>
     <meta property="og:image" content='<%= image_url "og.jpg" %>'/>
     <%= display_meta_tags og: {title: :title, site_name: :site, description: :description, url: :url} %>
+    <%= display_meta_tags twitter: {title: :title, site_name: :site, description: :description, url: :url} %>
     <%= display_meta_tags site: 'www.jogooletters.com' %>
     <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
@@ -80,7 +80,7 @@
      $('#loading').hide();
   });
 </script>
-<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a079d6e1bd51e5e"></script> 
+
 </body>
 </html>
 
