@@ -18,10 +18,10 @@ def index
   @articles_by_month = Article.all.order(created_at: :desc).group_by { |article| article.created_at.beginning_of_month }
 end
 def show
-	@article = Article.find(params[:id])
+	@article = Article.friendly.find(params[:id])
 	@comment = Comment.new
 	@comment.article_id = @article_id
-	@article_author = Article.includes(:author).find(params[:id])[:author_id]
+	@article_author = Article.includes(:author).friendly.find(params[:id])[:author_id]
 end
 def new
 	@article = Article.new

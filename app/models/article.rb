@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
-
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 	belongs_to :category
 	belongs_to :author
 	validates :category, presence: true
@@ -17,7 +18,8 @@ def tag_list=(tags_string)
 	new_or_found_tags = tag_names.collect {|name| Tag.find_or_create_by(name: name)}
 	self.tags = new_or_found_tags
 end
-def slug
-    "#{self.title} #{self.id}"
+  def to_param
+    [title.parameterize].join("-")
   end
+
 end

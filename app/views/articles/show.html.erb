@@ -7,7 +7,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <% set_meta_tags description: @article.body.truncate_words(17),
-                 keywords: tag.name, 
+                 keywords: @article.title.split(/\W+/), 
                  url: article_url(@article),
                  site: "www.jogooletters.com" 
                  %>
@@ -47,7 +47,7 @@
 
 			</div>
 
-			<% if current_user.try(:admin?) || current_user == Article.find(params[:id]).author %>
+			<% if current_user.try(:admin?) || current_user == Article.friendly.find(params[:id]).author %>
 			<%= link_to "Delete Article", article_path(@article), method: :delete, data: {confirm: "Do you want to delete the article?"}, id: 'article-show-link' %>
 			<%= link_to "Edit Article", edit_article_path(@article), id: 'article-show-link' %>
 			<% end %>

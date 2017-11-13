@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171113152015) do
+ActiveRecord::Schema.define(version: 20171113230414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,8 +43,10 @@ ActiveRecord::Schema.define(version: 20171113152015) do
     t.integer "image_file_size"
     t.datetime "image_uploaded_at"
     t.bigint "author_id"
+    t.string "slug"
     t.index ["author_id"], name: "index_articles_on_author_id"
     t.index ["category_id"], name: "index_articles_on_category_id"
+    t.index ["slug"], name: "index_articles_on_slug", unique: true
   end
 
   create_table "attachments", force: :cascade do |t|
@@ -71,9 +73,11 @@ ActiveRecord::Schema.define(version: 20171113152015) do
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
     t.boolean "admin", default: false
+    t.string "slug"
     t.index ["email"], name: "index_authors_on_email", unique: true
     t.index ["remember_me_token"], name: "index_authors_on_remember_me_token"
     t.index ["reset_password_token"], name: "index_authors_on_reset_password_token"
+    t.index ["slug"], name: "index_authors_on_slug", unique: true
   end
 
   create_table "categories", force: :cascade do |t|
@@ -104,18 +108,6 @@ ActiveRecord::Schema.define(version: 20171113152015) do
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
-  create_table "friendly_id_slugs", force: :cascade do |t|
-    t.string "slug", null: false
-    t.integer "sluggable_id", null: false
-    t.string "sluggable_type", limit: 50
-    t.string "scope"
-    t.datetime "created_at"
-    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
-    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
-    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
-    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
-  end
-
   create_table "taggings", force: :cascade do |t|
     t.bigint "tag_id"
     t.bigint "article_id"
@@ -136,14 +128,7 @@ ActiveRecord::Schema.define(version: 20171113152015) do
     t.bigint "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "remember_me_token"
-    t.datetime "remember_me_token_expires_at"
-    t.string "reset_password_token"
-    t.datetime "reset_password_token_expires_at"
-    t.datetime "reset_password_email_sent_at"
     t.index ["author_id"], name: "index_users_on_author_id"
-    t.index ["remember_me_token"], name: "index_users_on_remember_me_token"
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
   end
 
   add_foreign_key "articles", "authors"
