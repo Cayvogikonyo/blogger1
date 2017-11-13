@@ -505,7 +505,7 @@ input[type=submit]{
   }
 
 .input,form input[type=text],form input[type=password],form textarea{
-  width: auto;
+  width: 100%;
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
   -ms-box-sizing:border-box;
@@ -556,7 +556,7 @@ h1.article_header{
   font-size: 47.5px;
   }
 
-input#comment_author_name{
+#comment_author_name{
   max-width: 340px;
 }
 
